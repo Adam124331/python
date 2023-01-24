@@ -1,0 +1,19 @@
+length = float(input("Enter the length of the rectangle: "))
+breadth = float(input("Enter the breadth of the rectangle: "))
+
+# Calculate the area
+area = length * breadth
+
+# Calculate the perimeter
+perimeter = 2 * (length + breadth)
+
+# Print the results
+print("Area of the rectangle is: ", area)
+print("Perimeter of the rectangle is: ", perimeter)
+
+
+OUTPUT
+Enter the length of the rectangle: 5
+Enter the breadth of the rectangle: 7
+Area of the rectangle is:  35.0
+Perimeter of the rectangle is:  24.0
