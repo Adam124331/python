@@ -1,0 +1,38 @@
+# Get the marks for each subject
+subject1 = int(input("Enter the marks for subject 1: "))
+subject2 = int(input("Enter the marks for subject 2: "))
+subject3 = int(input("Enter the marks for subject 3: "))
+subject4 = int(input("Enter the marks for subject 4: "))
+subject5 = int(input("Enter the marks for subject 5: "))
+subject6 = int(input("Enter the marks for subject 6: "))
+
+# Calculate the total marks
+total = subject1 + subject2 + subject3 + subject4 + subject5 + subject6
+
+# Calculate the average marks
+average = total / 6
+
+# Print the results
+print("Total marks: ", total)
+print("Average marks: ", average)
+
+
+OUTPUT:
+Enter the marks for subject 1: 99
+Enter the marks for subject 2: 45
+Enter the marks for subject 3: 77
+Enter the marks for subject 4: 88
+Enter the marks for subject 5: 99
+Enter the marks for subject 6: 78
+Total marks:  486
+Average marks:  81.0
+
+
+#summary
+'''
+In this program, the user is prompted to enter the marks for each of the 6 subjects, which are stored in variables subject1, subject2, subject3, subject4, subject5, and subject6.
+The program then calculates the total marks by adding up all the individual subject marks and stores it in the total variable.
+The average marks are calculated by dividing the total marks by 6, which is the number of subjects and stored in the average variable.
+Finally, the program prints the results of total and average marks.
+'''
+
