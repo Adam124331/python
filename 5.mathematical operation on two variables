@@ -1,0 +1,24 @@
+a = float(input("Enter the first number: "))
+b = float(input("Enter the second number: "))
+
+# Addition
+addition = a + b
+
+# Subtraction
+subtraction = a - b
+
+# Multiplication
+multiplication = a * b
+
+# Division
+division = a / b
+
+# Modulus
+modulus = a % b
+
+# Print the results
+print("Addition: ", addition)
+print("Subtraction: ", subtraction)
+print("Multiplication: ", multiplication)
+print("Division: ", division)
+print("Modulus: ", modulus)
