@@ -1,0 +1,35 @@
+#calculator class
+
+class Calculator:
+    def __init__(self):                 
+        pass
+
+    def add(self, a, b):
+        return a + b
+
+    def sub(self, a, b):
+        return a - b
+
+    def mul(self, a, b):
+        return a * b
+
+    def div(self, a, b):
+        return a / b
+
+calc = Calculator()
+print(calc.add(3, 4)) # prints 7
+print(calc.sub(8, 2)) # prints 6
+print(calc.mul(3, 4)) # prints 12
+print(calc.div(8, 2)) # prints 4.0
+
+
+"""
+The above code creates a Calculator class with four methods add, sub, mul and div. 
+Each of these methods takes in two numbers as arguments and performs the corresponding operation on them. 
+The methods return the result of the calculation.
+
+You can use the class by instantiating an object of it and then call its methods. 
+In the example above, we created an object of the class by calc = Calculator() 
+and then called its methods add, sub, mul, div on this object.
+
+"""
