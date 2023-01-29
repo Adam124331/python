@@ -1,0 +1,7 @@
+def rotate_list(lst):                        # function definition
+    return lst[-1:] + lst[:-1]        #list slicing  it starts from last value in the list and adds the beginning of the list till the end of the list excluding the last value
+
+# Example usage
+original_list = [1, 2, 3, 4, 5]
+rotated_list = rotate_list(original_list)   #function call
+print(rotated_list)  # [5, 1, 2, 3, 4]             #printing thr values
