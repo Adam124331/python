@@ -1,0 +1,20 @@
+
+
+def add_or_concatenate(param1, param2):
+    if type(param1) == str and type(param2) == str:
+        return int(param1) + int(param2)
+    elif type(param1) == int and type(param2) == int:
+        return str(param1) + str(param2)
+    else:
+        return "Both parameters should be either strings or integers"
+
+result = add_or_concatenate("2","3")
+print(result)
+
+result = add_or_concatenate(2,3)
+print(result)
+
+
+output:
+5
+23
