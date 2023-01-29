@@ -1,0 +1,24 @@
+#valid pin
+
+
+def is_valid_pin(pin):
+    return len(pin) in [4, 6] and pin.isnumeric() and " " not in pin
+
+pin = input("Enter the pin: ")
+if is_valid_pin(pin):
+    print("valid pin")
+else:
+    print("Invalid pin")
+    
+  
+  """
+  def is_valid_pin(pin):
+    return len(pin) in [4, 6] and pin.isnumeric() and " " not in pin
+
+pin = input("Enter the pin: ")
+if is_valid_pin(pin):
+    print("valid pin")
+else:
+    print("Invalid pin")
+"""
+    
