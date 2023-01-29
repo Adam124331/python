@@ -1,0 +1,30 @@
+#BACK TO HOME 
+
+
+def back_to_home(directions):
+
+
+    # initialize north, west, south, and east counts to 0
+    n = 0
+    w = 0
+    s = 0
+    e = 0
+    
+    
+    # iterate through the directions string
+    for direction in directions:
+        if direction == 'N':
+            n += 1
+        elif direction == 'W':
+            w += 1
+        elif direction == 'S':
+            s += 1
+        elif direction == 'E':
+            e += 1
+            
+    # check if north and south counts are equal and east and west counts are equal
+    return n == s and e == w
+
+print(back_to_home("EEWE"))
+print(back_to_home("NENESSWW"))
+print(back_to_home("NNWWEESS") )
