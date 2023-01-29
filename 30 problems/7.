@@ -1,0 +1,34 @@
+#football match points
+
+def total_points(wins,draws,losses):
+  
+
+    # Multiply wins by 3 to get the number of points for wins
+    points_for_wins = wins * 3
+    
+    # Multiply draws by 1 to get the number of points for draws
+    points_for_draws = draws * 1
+    
+    # Multiply losses by 0 to get the number of points for losses
+    points_for_losses = losses * 0
+    
+    # Add up the points for wins, draws, and losses to get the total points
+    total_points = points_for_wins + points_for_draws + points_for_losses
+    
+    return total_points
+
+# Example usage:
+
+wins = int(input("Enter the number of wins: "))
+draws = int(input("Enter the number of draws: "))
+losses = int(input("Enter the number of losses: "))
+
+print("Total Points: ", total_points(wins,draws,losses))
+
+
+"""
+This function takes in 3 arguments wins, draws,losses. 
+It then calculates the total points based on the rules you've described:
+3 points for a win, 1 point for a draw, and 0 points for a loss. 
+It then returns the total points.
+"""
