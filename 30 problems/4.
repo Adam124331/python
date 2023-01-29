@@ -1,0 +1,26 @@
+#the farm problem
+
+def animals(chickens, cows, pigs):
+    chicken_legs = chickens * 2
+    cow_legs = cows * 4
+    pig_legs = pigs * 4
+    total_legs = chicken_legs + cow_legs + pig_legs
+    return total_legs
+
+# Example usage
+chickens = int(input("Enter number of chickens: "))
+cows = int(input("Enter number of cows: "))
+pigs = int(input("Enter number of pigs: "))
+result = animals(chickens, cows, pigs)
+print("Total number of legs:", result)
+
+
+"""
+In this code, the function animals(chickens,cows,pigs) takes in the number of chickens, cows and pigs as input 
+and calculates the number of legs for each type of animal using the input values and basic arithmetic operations. 
+It then adds up the number of legs for each animal to get the total number of legs and returns it.
+
+The input is taken from user, by casting them to int, and 
+then passed to the function, where the calculation is done and returned.
+
+"""
