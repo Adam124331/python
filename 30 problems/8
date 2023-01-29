@@ -1,0 +1,12 @@
+#invert dictionary
+
+def invert_dict(original_dict):
+    return {value: key for key, value in original_dict.items()}          #dictionary comprehentiom
+
+original_dict = {1: 'a', 2: 'b', 3: 'c'}
+inverted_dict = invert_dict(original_dict)                         #function call
+print(inverted_dict)
+
+
+output:
+{'a': 1, 'b': 2, 'c': 3}
