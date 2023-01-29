@@ -1,0 +1,26 @@
+#finding the Nth even number
+
+"""
+In this code, the function nth_even takes an integer n as input. 
+The function first checks whether the input number is 0. If the input number is 0, i
+t returns a message indicating that 0 is the first even number.
+"""
+
+def nth_even(n):
+    if n == 0:
+        return "{} is the first even number.".format(0)
+    else:
+        return "{} is the {}th even number.".format(2*(n-1),n)
+
+"""
+If the input number is greater than 0, 
+it calculates the nth even number by multiplying (n-1) with 2
+and returns the result with a message indicating that it is the nth even number.
+"""
+ 
+# Example usage
+n = int(input("Enter a number: "))
+result = nth_even(n)
+print(result)
+
+
