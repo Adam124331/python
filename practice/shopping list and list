@@ -1,0 +1,22 @@
+def count_elements(list1, shopping_list):
+  count = {}
+  for fruit in list1:
+    count[fruit] = 0
+  for item in shopping_list:
+    if item in count:
+      count[item] += 1
+  return count
+
+list1 = ['apples', 'bananas', 'pineapples']
+shopping_list = ['apples', 'apples', 'bananas', 'apples', 'pear', 'pineapples', 'pear', 'apples', 'banana']
+
+count = count_elements(list1, shopping_list)
+print(count)
+
+
+OUTPUT:
+{'apples': 4, 'bananas': 1, 'pineapples': 1}
+
+
+
+
