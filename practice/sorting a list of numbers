@@ -1,0 +1,13 @@
+numbers = [1.0, 1.5, 9.0, 10.7, 2]
+numbers.sort()
+print('Sorted list:', numbers)
+
+output:
+Sorted list: [1.0, 1.5, 2, 9.0, 10.7]
+ 
+ """
+ In this program, a list of numbers is created,  
+ and the sort method is called on the list to sort it in ascending order.
+ The sorted list is then printed to the console.
+ 
+ """
