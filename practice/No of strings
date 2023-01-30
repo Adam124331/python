@@ -1,0 +1,16 @@
+strings = ['foo', 'bar', 'baz', 'qux', 'quux']
+count = 0
+
+for string in strings:
+    if len(string) >= 5:
+        count += 1
+
+print('Number of strings with length >= 5:', count)
+
+
+OUTPUT:
+Number of strings with length >= 5: 0
+
+
+
+"""since no strings are greater than 5 we got 0 as output"""
