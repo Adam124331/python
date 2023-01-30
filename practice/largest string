@@ -1,0 +1,21 @@
+strings = ['foo', 'bar', 'baz', 'qux', 'quux']
+largest_string = ''
+
+for string in strings:
+    if len(string) > len(largest_string):
+        largest_string = string
+
+print('Largest string:', largest_string)
+
+
+OUTPUT:
+Largest string: quux
+
+
+"""
+In this program, a list of strings is created, and a variable largest_string is initialized to an empty string. 
+The for loop iterates over each string in the list, and for each string,
+it compares the length of the string with the length of the current largest_string. 
+If the length of the current string is greater than the length of largest_string, largest_string is updated to the current string.
+
+After the for loop has finished, largest_string will contain the largest string in the list, and it is printed to the console.
