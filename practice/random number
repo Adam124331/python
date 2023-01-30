@@ -1,0 +1,42 @@
+import random
+
+random_number = random.randint(1, 20)
+
+for i in range(5):
+    guess = int(input("Guess the number (1-20): "))
+    if guess == random_number:
+        print("You got it! The number was", random_number)
+        break
+    elif guess < random_number:
+        print("The number is higher.")
+    else:
+        print("The number is lower.")
+else:
+    print("You didn't guess the number in 5 tries. The number was", random_number)
+    
+    
+    
+    
+OUTPUT:
+Guess the number (1-20): 17
+The number is lower.
+Guess the number (1-20): 24
+The number is lower.
+Guess the number (1-20): 54
+The number is lower.
+Guess the number (1-20): 876
+The number is lower.
+Guess the number (1-20): 1
+The number is higher.
+You didn't guess the number in 5 tries. The number was 5
+
+
+"""
+summary
+The program generates a random number between 1 and 20 (inclusive) using the random.randint() function, 
+and then repeatedly prompts the user to guess the number.
+The program compares the user's guess with the random number, 
+and prints a message indicating whether the guess is correct, too low, or too high.
+If the user fails to guess the number within 5 tries, 
+the program prints a message indicating that the user has lost the game.
+"""
