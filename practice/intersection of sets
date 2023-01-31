@@ -1,0 +1,7 @@
+set1 = {1, 2, 3}
+set2 = {2, 3, 4}
+
+common_elements = set1.intersection(set2)
+print(common_elements)
+
+output: {2,3}
