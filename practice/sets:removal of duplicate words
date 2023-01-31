@@ -1,0 +1,9 @@
+sentence = "the the quick quick brown brown fox jumps over the lazy dog"
+
+#split method splits the lists into small substrings as you can see in the output.
+words = sentence.split()           
+
+print(words)
+
+unique_words = list(set(words))
+print(" ".join(unique_words))
