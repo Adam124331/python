@@ -1,0 +1,25 @@
+L = [1,2,2,3,4,5,4,4,5,5,6,7]
+new_list = []
+for i in L:
+    if len(new_list) == 0 or new_list[-1] != i:
+        new_list.append(i)
+print(new_list)
+
+
+OUTPUT:
+[1, 2, 3, 4, 5, 4, 5, 6, 7]
+
+
+
+"""summary
+The code above is a simple implementation to remove adjacent duplicates from a list in Python. Here's how it works:
+
+Create an empty list new_list to store the elements with duplicates removed.
+Start a for loop to iterate through each element i in the original list L.
+Within the for loop, check if new_list is empty (len(new_list) == 0) or the last element of new_list is not equal to i (new_list[-1] != i).
+If the condition is true, append i to new_list.
+Repeat the loop until all elements in L have been processed.
+Finally, print the new_list to see the result.
+The new_list will only have an element appended to it if the previous element is not the same. This way, adjacent duplicates are removed.
+
+"""
