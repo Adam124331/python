@@ -1,0 +1,11 @@
+birthdays = {'harini':"April 12","shravani":"oct 13","ravi":"nov"}
+
+name = input("Enter a name: ")
+
+if name in birthdays.keys():
+    print("{}'s birthday is on {}".format(name, birthdays[name]))
+else:
+    birthday = input("{} is not found. Please enter the birthday: ".format(name))
+    birthdays[name] = birthday
+    print("{} is added to the dictionary with birthday {}".format(name, birthdays[name]))
+    print(birthdays)
