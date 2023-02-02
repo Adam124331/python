@@ -1,0 +1,54 @@
+import pprint
+message = "This is Python hands-on Programming and I want to make the most out of it"
+new_dic = {}
+for character in message:
+    new_dic.setdefault(character, 0)
+    new_dic[character] = new_dic[character] + 1
+pprint.pprint(new_dic)
+
+
+output:
+{' ': 14,
+ '-': 1,
+ 'I': 1,
+ 'P': 2,
+ 'T': 1,
+ 'a': 5,
+ 'd': 2,
+ 'e': 2,
+ 'f': 1,
+ 'g': 2,
+ 'h': 4,
+ 'i': 4,
+ 'k': 1,
+ 'm': 4,
+ 'n': 6,
+ 'o': 7,
+ 'r': 2,
+ 's': 4,
+ 't': 7,
+ 'u': 1,
+ 'w': 1,
+ 'y': 1}
+
+
+
+
+
+"""summary
+ importing the pprint module from the Python Standard Library. 
+pprint (pretty print) is used to print the contents of a dictionary in a more readable format.
+
+The message string is defined and an empty dictionary new_dic is created.
+
+A for loop is used to iterate over each character in the message string. 
+The setdefault method is used to set a default value for each character in the new_dic dictionary. If the character does not already exist as a key in the dictionary, it is added with a default value of 0.
+
+For each iteration of the loop, the value of the current character in the new_dic dictionary is incremented by 1.
+
+Finally, the pprint function is used to print the contents of the new_dic dictionary. 
+The result shows the count of each character in the message string.
+
+
+
+
