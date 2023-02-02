@@ -1,0 +1,21 @@
+birthdays = {'harini':"April 12","shravani":"oct 13","ravi":"nov"}
+
+name = input("Enter a name: ")
+
+if name in birthdays.keys():
+    print("{}'s birthday is on {}".format(name, birthdays[name]))
+else:
+    birthday = input("{} is not found. Please enter the birthday: ".format(name))
+    birthdays[name] = birthday
+    print("{} is added to the dictionary with birthday {}".format(name, birthdays[name]))
+    print(birthdays)
+
+october_birthdays = []
+for key, value in birthdays.items():
+    if "oct" in value:
+        october_birthdays.append(key)                    #appending to new variable list
+
+if october_birthdays:
+    print("Keys of people with October birthdays:", october_birthdays)
+else:
+    print("No one has a birthday in October.")
