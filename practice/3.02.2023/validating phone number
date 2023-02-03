@@ -1,0 +1,56 @@
+import re
+
+def is_valid_phone_number(phone_number):
+    pattern = r'^\+\d{2}\s-\s\d{10}$'
+    return bool(re.match(pattern, phone_number))
+
+phone_number = input("Enter a phone number in the format '+91 - 1234567891': ")
+if is_valid_phone_number(phone_number):
+    print("Valid phone number")
+else:
+    print("Invalid phone number")
+
+
+OUTPUT:
+Enter a phone number in the format '+91 - 1234567891': +91 - 9223240407
+Valid phone number
+
+
+"""
+summary
+The code pattern = r'^\+\d{2}\s-\s\d{10}$' defines a regular expression pattern for validating phone numbers in the format "+91 - 1234567891".
+Here's a detailed explanation of the different parts of the pattern:
+
+^ - Matches the start of the string. The ^ symbol is called an anchor, 
+and it specifies that the pattern must match the start of the string.
+
+\+ - Matches a literal plus symbol. The backslash \ is used to escape the special meaning of + in a regular expression. 
+The pattern requires the phone number to start with a plus symbol.
+
+\d{2} - Matches exactly two digits. \d is a shorthand character class that matches any digit (0-9). 
+The {2} quantifier specifies that exactly two of these should be matched.
+The pattern requires exactly two digits after the plus symbol.
+
+\s - Matches a whitespace character, such as a space or a tab. The pattern requires a space after the second digit.
+
+- - Matches a literal hyphen. 
+The hyphen also has a special meaning in regular expressions, so it needs to be escaped with a backslash \. The pattern requires a hyphen after the space.
+
+\d{10} - Matches exactly 10 digits. The pattern requires exactly 10 digits after the hyphen.
+
+$ - Matches the end of the string.
+The $ symbol is another anchor, and it specifies that the pattern must match the end of the string.
+
+The line return bool(re.match(pattern, phone_number)) 
+uses the re.match function from the re module to match the pattern against the phone_number argument. 
+If the phone number matches the pattern, re.match returns
+
+a match object, which is considered to be a "truthy" value in Python, 
+so bool(re.match(pattern, phone_number)) returns True. 
+If the phone number does not match the pattern, re.match returns None, 
+which is considered to be a "falsy" value in Python, so bool(re.match(pattern, phone_number)) returns False.
+
+In short, the code returns True if the phone_number argument matches the specified pattern, and False otherwise.
+
+"""
+
