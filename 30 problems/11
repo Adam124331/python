@@ -1,0 +1,35 @@
+def capitalize_first_letter_of_words(string):
+    words = string.split()
+    capitalized_words = [word[0].upper() + word[1:] for word in words]
+    return " ".join(capitalized_words)
+
+user_input = input("Enter a string: ")
+result = capitalize_first_letter_of_words(user_input)
+print("Capitalized string:", result)
+
+
+OUTPUT:
+Enter a string: 23 affan shariff
+Capitalized string: 23 Affan Shariff
+
+
+"""
+summary:
+The code takes a string as input from the user and capitalizes the first letter of each word in the string.
+
+capitalize_first_letter_of_words is the main function that takes a string as input and capitalizes the first letter of each word in the string. 
+The function first splits the input string into separate words using the .split() method, which returns a list of words.
+Then, for each word in the list, the first letter is capitalized using the .upper() method 
+and the rest of the word is added to the capitalized first letter to form a new word.
+The capitalized words are stored in a new list capitalized_words.
+Finally, the .join() method is used to join the capitalized words into a single string separated by spaces, which is the output of the function.
+
+The user input is obtained using the input function
+, which prompts the user to enter a string and stores the entered string in the variable user_input.
+The input string is then passed as an argument to the capitalize_first_letter_of_words function, which returns the capitalized string.
+This capitalized string is then printed using the print function.
+
+
+"""
+
+
