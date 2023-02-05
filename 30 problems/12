@@ -1,0 +1,19 @@
+def next_letter(string):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    return "".join([alphabet[(alphabet.index(char) + 1) % 26] for char in string])
+
+user_input = input("Enter a string: ")
+result = next_letter(user_input)
+print("Next letter string:", result)
+
+
+OUTPUT:
+Enter a string: hello
+Next letter string: ifmmp
+
+
+"""summaryIn this approach, we iterate over each character in the input string, find its index in the alphabet, and add 1 to that index.
+To handle the case where the index of the last letter in the alphabet is 25, we use the modulo operator (% 26) to wrap around to 0 when the index exceeds 25.
+The list comprehension collects the result of each iteration in a list, which is then joined into a single string using the .join method.
+
+"""
