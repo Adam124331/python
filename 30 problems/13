@@ -1,0 +1,77 @@
+#input into string to caml/snake case
+
+def convert_case(string, case_type):
+    if case_type == "camel":
+        return string.title().replace(" ", "")
+    elif case_type == "snake":
+        return string.lower().replace(" ", "_")
+    else:
+        return "Invalid case type. Please choose either 'camel' or 'snake'."
+
+user_input = input("Enter a string: ")
+case_type = input("Enter case type (camel/snake): ")
+result = convert_case(user_input, case_type)
+print("Converted string:", result)
+
+
+OUTPUT:
+Enter a string: affan shariff
+Enter case type (camel/snake): camel
+Converted string: AffanShariff
+
+
+"""
+summary 1:
+This implementation uses the .title() and .lower() methods, along with the .replace() method, to convert the input string into the desired case format.
+
+If the case_type is "camel", the function uses the .title() method to capitalize the first letter of each word, then uses the .replace() method to remove the spaces.
+
+If the case_type is "snake", the function uses the .lower() method to convert the string to lowercase, then uses the .replace() method to replace the spaces
+                                                                                                                                              with underscores.
+
+
+If the case_type is neither "camel" nor "snake", the function returns an error message.
+
+
+summary 2:
+
+
+The .title() method in Python is a string method that returns a string with the first letter of each word capitalized. 
+It capitalizes the first letter of each word and converts the rest of the letters in each word to lowercase.
+
+For example:
+
+
+text = "hello world"
+result = text.title()
+print(result)
+Output:
+Hello World
+Note that the .title() method only affects the first letter of each word in the string, not all the letters.
+
+
+summary3:
+The .replace() method in Python is a string method that returns a copy of the original string with specified occurrences of a specified string replaced with another string.
+
+Syntax: string.replace(old, new, count)
+
+old: The old string to be replaced.
+new: The new string to replace the old string.
+count: The number of occurrences of the old string to be replaced. By default, all occurrences of the old string are replaced.
+For example:
+
+text = "hello world"
+result = text.replace(" ", "_")
+print(result)
+Output:
+hello_world
+
+
+"""
+
+
+
+
+
+
+
