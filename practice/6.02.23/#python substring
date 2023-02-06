@@ -1,0 +1,35 @@
+import re
+
+# input string
+string = "Twelve:12 Eighty nine:89 Thirty-two:32"
+
+# Use re.findall to get all substrings that match the pattern [A-Za-z\s]+: in the input string
+substrings = re.findall(r'[A-Za-z\s]+:', string)
+
+# Print all substrings before :
+print("All substrings before :", substrings)
+
+# Use re.match to get only the first substring that matches the pattern [A-Za-z\s]+: in the input string
+first_substring = re.match(r'[A-Za-z\s]+:', string).group()
+
+# Print only the first substring before :
+print("Only first substring before :", first_substring)
+
+
+OUTPUT:
+All substrings before : ['Twelve:', 'Eighty nine:', 'Thirty-two:']
+Only first substring before : Twelve:
+
+
+
+"""
+summary
+In this code, the re module is imported to use its regular expression functions. The input string string is defined at the start of the code.
+
+The re.findall function is used to directly search for all substrings that match the pattern [A-Za-z\s]+: in the input string string. 
+The function returns a list of all matches, which are then printed using the print statement.
+
+The re.match function is used to directly search for the first substring that matches the pattern [A-Za-z\s]+: in the input string string.
+The function returns a Match object, which can be used to access the matched string using .group(). The matched string is then printed using the print statement.
+
+"""
