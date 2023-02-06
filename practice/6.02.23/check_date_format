@@ -1,0 +1,37 @@
+import re
+
+# Input date
+date = input("Enter the date (dd/MON/yyyy): ")
+
+# Use re.match to search for a match to the pattern "\d\d[/]*(JAN|FEB|MAR|APR|MAY|JUN|JLY|AUG|SEP|OCT|NOV|DEC)[/]*\d\d\d\d" in the input date
+date_match = re.match(r'\d\d[/]*(JAN|FEB|MAR|APR|MAY|JUN|JLY|AUG|SEP|OCT|NOV|DEC)[/]*\d\d\d\d', date)
+
+# Check if the input date matches the pattern
+if date_match:
+    print("Valid date")
+else:
+    print("Invalid date")
+
+output:
+Enter the date (dd/MON/yyyy): 06/JAN/2020
+Valid date
+
+
+
+"""
+summary
+
+In this code, the re module is imported to use its regular expression functions. The input date is taken as an input from the user.
+
+The re.match function is used to search for a match to the
+pattern \d\d[/]*(JAN|FEB|MAR|APR|MAY|JUN|JLY|AUG|SEP|OCT|NOV|DEC)[/]*\d\d\d\d in the input date. 
+The function returns a Match object if there's a match, or None if there's no match.
+
+A simple if statement is used to check if the input date matches the pattern. 
+If the input date matches the pattern, the print statement outputs "Valid date". 
+If it doesn't match the pattern, the print statement outputs "Invalid date".
+
+"""
+
+
+
