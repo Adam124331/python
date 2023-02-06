@@ -1,0 +1,25 @@
+import re
+
+def extract_nums(string):
+    return [int(num) for num in re.findall(r'\d+', string)]
+
+string = "There are 8 people in the office, only 5 attended meeting"
+res = extract_nums(string)
+print(res)
+
+
+
+
+
+
+
+
+"""
+summary
+in this code, the re.findall function is used to directly search for one or more consecutive digits (\d+) in the input string string.
+The function returns a list of all matches, which are then converted to integers using a list comprehension.
+
+"""
+
+OUTPUT:
+[8, 5]
