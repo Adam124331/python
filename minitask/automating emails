@@ -1,0 +1,13 @@
+'''
+This is a script that sends an email to a recipient with an image attachment.
+
+The recipient's email address is obtained through user input, and the email is sent every hour using the schedule library. 
+
+The script uses the smtplib library to connect to Gmail's SMTP server and send the email, and
+the ssl library is used to create a secure context for the connection. 
+
+The EmailMessage class from the email library is used to create an email message object that contains the header fields and the email body text. T
+he script runs indefinitely using a while loop, and the schedule.run_pending() function is called at each iteration to run any scheduled tasks.
+
+
+"""
