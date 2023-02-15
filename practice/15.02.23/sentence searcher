@@ -1,0 +1,30 @@
+def sentence_searcher(txt, word):
+    # Split the text into sentences using the full stop as a delimiter
+    sentences = txt.split(".")
+    # Iterate through the sentences and look for the target word
+    for sentence in sentences:
+        if word.lower() in sentence.lower():
+            # Add the full stop back onto the sentence and return it
+            return sentence.strip() + "."
+    # If the word isn't found in any sentence, return an empty string
+    return ""
+
+# Example usage and test cases
+text = "I have a cat. I have a mat. Things are going swell."
+print(sentence_searcher(text, "have")) # Output: "I have a cat."
+print(sentence_searcher(text, "MAT")) # Output: "I have a mat."
+print(sentence_searcher(text, "things")) # Output: "Things are going swell."
+print(sentence_searcher(text, "flat")) # Output: ""
+
+
+"""
+summary
+The sentence_searcher() function takes two arguments, txt and word.
+It splits the txt string into sentences using the full stop as a delimiter,
+
+then iterates through each sentence to look for the word. If word is found in a sentence,
+the function returns the entire sentence with the full stop at the end. If word is not found in any sentence, 
+the function returns an empty string. The search is case-insensitive, meaning that it will match word regardless of whether it is in uppercase or lowercase letters.
+
+
+
