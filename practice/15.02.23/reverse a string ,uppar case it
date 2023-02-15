@@ -1,0 +1,10 @@
+def reverse_capitalize(txt):
+    return txt[::-1].upper()
+
+input_str = input("Enter a string of lowercase characters: ")
+result = reverse_capitalize(input_str)
+print(result)
+
+OUTPUT:
+Enter a string of lowercase characters: affan shariff
+FFIRAHS NAFFA
