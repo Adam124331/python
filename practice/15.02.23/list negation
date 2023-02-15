@@ -1,0 +1,25 @@
+input_list = []
+n = int(input("Enter the number of elements in the list: "))
+for i in range(n):
+    elem = int(input(f"Enter element {i+1}: "))
+    input_list.append(-elem)
+
+print(f"Inverted list: {input_list}")
+
+output:
+Enter the number of elements in the list: 5
+Enter element 1: -5
+Enter element 2: -0
+Enter element 3: 0
+Enter element 4: 45
+Enter element 5: 54
+Inverted list: [5, 0, 0, -45, -54]
+
+
+
+"""summary
+The code prompts the user to enter the number of elements in the list and then prompts the user to enter each element.
+It then appends the negation of each element to a list, 
+effectively inverting the sign of each number. Once all elements have been processed, the code prints the resulting list with the sign of each number inverted.
+
+"""
