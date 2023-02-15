@@ -1,0 +1,21 @@
+def flatten_list(lst):
+    result = []
+    for item in lst:
+        if isinstance(item, list):
+            result.extend(flatten_list(item))
+        else:
+            result.append(item)
+    return result
+"""summary
+The flatten_list() function takes a list as input and returns a flattened list with all elements from the input list, 
+
+following the conditions specified in the prompt.
+If an element in the input list is itself a list, the function recursively calls itself on that list until all nested lists have been flattened. 
+The function uses a for loop to iterate over each element in the input list, and an if-else statement to check whether the element is a list or a primitive data type.
+If the element is a list, the function extends the result list with the flattened list returned by recursively calling itself on that list.
+
+If the element is a primitive data type, the function appends the element to the result list. Once all elements have been processed, 
+the function returns the result list.
+"""
+
+
