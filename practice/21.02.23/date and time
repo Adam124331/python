@@ -1,0 +1,30 @@
+import pytz
+from datetime import datetime
+
+# Set the time zone to India
+timezone = pytz.timezone('Asia/Kolkata')
+
+# Get the current time in the specified time zone
+now = datetime.now(timezone)
+
+# Extract the date and time components
+date = now.date()
+time = now.time()
+year = now.year
+month = now.month
+day = now.day
+hour = now.hour
+minute = now.minute
+second = now.second
+microsecond = now.microsecond
+
+# Print the components
+print("Date:", date)
+print("Time:", time)
+print("Year:", year)
+print("Month:", month)
+print("Day:", day)
+print("Hour:", hour)
+print("Minute:", minute)
+print("Second:", second)
+print("Microsecond:", microsecond)
