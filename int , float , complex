@@ -1,0 +1,12 @@
+a= int(12)
+b=float(12.232)
+c=12 +5j
+print(type(a))
+print(type(b))
+print(type(c))
+
+OUTPUT:
+
+<class 'int'>
+<class 'float'>
+<class 'complex'>
