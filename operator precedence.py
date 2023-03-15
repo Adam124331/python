@@ -1,61 +1,100 @@
-1. a = 2 + 3 * 4 ** 2  # 2 + 3 * 16 = 50
-'''
-Copy code
-2 + 3 * 4 ** 2
-= 2 + 3 * 16
-= 50
-'''
+problem 1)
+
+input : 10 + 20 - 30 - 40 % 80 * 50 / 60 // 5
+  
+Output : -6.0
+  
+evualuation order : % * / // + -
+ 
+------------------------------------------------------------------------
+problem 2)
+
+input :  10 + 20 + +30 - -40 + 10
+    
+Output: 110
+  
+evualuation order : unaryPlus , UnaryMinus , addition
+  -----------------------------------------------------------------------
+  
+problem 3)
+
+input :  10 + +20 + ~1+ -2 + (10+10)
+  
+output: 46
+  
+order of evualuation : () , ~ , unaryMinus , 10 +20
+  
+-------------------------------------------------------------------------
+problem 4)
+
+input : 8>>2 + 10 + 5 ** 2
+  
+output : 0
+  
+order of evualuation : ** , + , >>
+  
+-------------------------------------------------------------------------
+
+problem 5)
+
+input : 1<<1 + 2 & 3 + ~1 + +10
+  
+output : 8
+  
+order of evualuation :  unary operators , addition , shift operators, bitwise &
+  
+--------------------------------------------------------------------------------
+problem 6)
+
+input :  1 | 2 | 3 |4 | 5 >>1 ^ 2 * 2
+  
+output : 7
+  
+order of evualuation : * ,  >> , ^ , bitwise or 
+  
+-------------------------------------------------------------------------------
+problem 7)
+
+input :   10 == 30 >> 1 + 2 // 2
+  
+output : false
+  
+order of evualuation : // , + , >> , ==
+  
+-------------------------------------------------------------------------------
+problem 8)
+
+input :  2  is 2 | 2 is not 2.1
+  
+output : True
+  
+order of evualuation : logial  or  , identity operator
+  
+--------------------------------------------------------------------------------------------
+
+problem 9)
+
+input :   1+3*4 - 1 and 2 not in [1,2,3] or 3 in [1,2,3]
+  
+output :   True
+  
+order of evualuation : * , + , - , not in , in , and , or
+ 
+
+-------------------------------------------------------------------------------------------
+
+problem 10)
+
+input :    1 & 1 and 1 or 1 | 1 ^ 2
+  
+output :   1
+  
+order of evualuation : bitwiseAND , bitwise Xor , bitwise OR , logical and logical or.
+  
+  
+--------------------------------------------------------------------------------------------------
+ 
 
 
 
-2. b = (2 + 3) * 4 ** 2  # 5 * 16 = 80
-'''
-(2 + 3) * 4 ** 2
-= 5 * 16
-= 80
-
-'''
-
-
-
-c = 10 % 3 + 2 / 5  # 1 + 0.4 = 1.4
-'''
-10 % 3 + 2 / 5
-= 1 + 0.4
-= 1.4
-
-'''
-d = 10 / 3 // 2  # 1
-'''
-10 / 3 // 2
-= 3.33... // 2
-= 1
-'''
-
-
-e = 0b1010 & 0b1100  # 0b1000 = 8
-f = 0b1010 ^ 0b1100  # 0b0110 = 6
-g = 0b1010 | 0b1100  # 0b1110 = 14
-
-
-
-h = 3 == 3.0  # True
-i = not 3 == 3.0  # False
-
-
-j = True or False and not True  # True
-
-'''
-The logical NOT (not) operator is evaluated first, then the logical AND (and) operator is evaluated, and finally the logical OR (or) operator is evaluated
-'''
-
-print(a)
-print(b)
-print(c)
-print(d)
-print(e)
-print(f)
-print(g)
-print(h)
-print(i)
-print(j)
+    
