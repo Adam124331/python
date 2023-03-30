@@ -1,0 +1,16 @@
+
+ip_address = "192.168.0.1"
+
+defanged_ip_address = defang_IP_address(ip_address)
+
+print(defanged_ip_address) 
+
+
+def defang_IP_address(address):
+    """
+    Given a valid (IPv4) IP address, return a defanged version of that IP address.
+    """
+    return address.replace('.', '[.]')
+    
+    
+ # Output: 192[.]168[.]0[.]1
