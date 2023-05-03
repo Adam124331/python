@@ -1,0 +1,75 @@
+1)
+lower_value = 1
+upper_value = int(input ("Please, Enter the Upper Range Value: "))  
+  
+print ("The Prime Numbers in the range are: ")  
+for number in range (1, upper_value + 1):  
+    if number > 1:  
+        for i in range (2, number):  
+            if (number % i) == 0:  
+                break  
+        else:  
+            print (number)  
+            
+            
+            
+ ------------------------------------------------------------------
+2)
+
+lower_value = int(input ("Please, Enter the Lowest Range Value: "))  
+upper_value = int(input ("Please, Enter the Upper Range Value: "))  
+  
+print ("The Prime Numbers in the range are: ")  
+for number in range (lower_value, upper_value + 1):  
+    if number > 1:  
+        for i in range (2, number):  
+            if (number % i) == 0:  
+                break  
+        else:  
+            print (number)  
+            
+ ------------------------------------------------------------------
+3)String shuffler          
+
+import random
+s="Affan shariff"
+l = list(s)
+random.shuffle(l)
+result = ''.join(l)
+print(result)
+
+
+
+ ------------------------------------------------------------------
+4)rows = 5
+columns = 10
+
+# Loop through number of rows
+for i in range(rows):
+    
+    # Loop through number of columns
+    for j in range(columns):
+        
+        # Printing Pattern
+        if i == 0 and j < rows:
+            print(j+1, end=' ')
+        elif i == 1 and j >= rows:
+            print(j+1, end=' ')
+    print()
+    
+    
+ ------------------------------------------------------------------
+5)
+N = int(input("Enter a number: "))
+
+# Upper half of the diamond
+for i in range(1, N+1):
+    for j in range(1, i+1):
+        print("*", end=" ")
+    print()
+
+# Lower half of the diamond
+for i in range(N-1, 0, -1):
+    for j in range(1, i+1):
+        print("*", end=" ")
+    print()
