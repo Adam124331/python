@@ -1,0 +1,99 @@
+# Operations on dictionaries
+
+# len()
+'''
+dic1 = {1:'Green',2:'Red',3:'Blue',4:'Yellow'}
+print(len(dic1))
+'''
+
+# membership check
+
+'''
+dic2 = {1:'Green',2:'Red',3:'Blue',4:'Yellow'}
+if 1 in dic2:
+    print('True')
+    
+if 5 not in dic2:
+    print('True')
+else:
+    print('False')
+'''
+
+
+# clear()
+
+dic3 = {1:'Green',2:'Red',3:'Blue',4:'Yellow'}
+print(dic3)
+dic3.clear()
+print(dic3)
+
+
+
+-------------------------------------------------------------------
+# Accessing items - get()
+
+'''
+dic = {'A':'Orange','B':'Apple','C':'Banana'}
+print(dic.get('B'))
+'''
+
+# Copy of a dictionary - copy()
+
+'''
+dic1 = {'A':'Orange','B':'Apple','C':'Banana'}
+dic2 = dic1.copy()
+dic1['A'] = 'Kiwi'
+print(dic1)
+print(dic2)
+'''
+
+# Copy of a list()
+________________________
+list1 = [20,15,85]
+list2 = list1.copy()
+list2.extend([90])
+print(list1)
+print(list2)
+print(id(list1))
+print(id(list2))
+
+
+-------------------------------------------------------------
+
+
+# iterating
+
+'''
+dic1 = {1:'Green',2:'Red',3:'Blue',4:'Yellow'}
+print(dic1)
+for i in dic1.keys():
+    if i == 2:
+        del dic1[i]
+print(dic1)
+'''
+
+# unpacking as arguments
+
+'''
+def fun(arg1='Hi',arg2='Welcome'):
+    print(arg1 + " " + arg2)
+    
+    
+list1 = ['Hello','World!']
+fun(*list1)
+'''
+
+
+#Multiple keyword arguments
+
+'''
+def fun(**data):
+    print(data)
+    
+
+fun(a=10,b=20,c=30)
+fun()
+fun(a=10)
+'''
+
+------------------------------------------------------
