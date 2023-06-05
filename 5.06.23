@@ -1,0 +1,51 @@
+___________________________________________________________________________________________________________________________
+
+#Delete a list of keys from a dictionary
+
+sample_dic = {
+    "name": "Mike",
+    "age" : 25,
+    "salary" : 5000,
+    "city" : "New york"
+    }
+
+print("Before deleting: ",sample_dic)
+keys = ["name", "salary"]
+
+for i in keys:
+    sample_dic.pop(i)
+print("After dleting: ",sample_dic)
+
+___________________________________________________________________________________________________________________________
+
+#Write a Python script to generate and print a dictionary that contains a number (between 1 and n) in the form (x, x*x).
+
+num = int(input("Enter the number: " ))
+dic_sq = {}
+
+for i in range(1, num+1):
+    dic_sq[i] = i*i
+
+print("Expected output : ",dic_sq)
+___________________________________________________________________________________________________________________________
+finding list length in python
+
+l1 = [10,20,30,40]
+count = 0 
+
+for i in l1:
+    count += 1 
+print(count)
+        
+___________________________________________________________________________________________________________________________
+        
+#Check if a Substring is Present in a Given String
+
+ 
+MyString1 = "hi hello good morning"
+ 
+if "good" in MyString1:
+    print("Yes! it is present in the string")
+else:
+    print("No! it is not present")
+
