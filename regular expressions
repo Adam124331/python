@@ -1,0 +1,50 @@
+# Regular expressions
+
+
+import re
+
+exp 0 
+------
+string = '\n and \r are escape sequences.'
+
+result = re.findall(r'[\n\r]', string) 
+print(result)
+
+# Output: ['\n', '\r']
+
+exp1 = "Hi hello good morinig"
+res1 = re.search("^Hi",exp1)
+print(res1)
+
+
+
+exp2 = "Hi hello good morining,hello world"
+res2 = re.findall("hello",exp2)
+print(res2)
+
+
+
+exp3 = "Hi all good morning,hello"
+res3 = re.findall("[a-p]",exp3)
+print(res3)
+
+
+
+exp4 = "hello 1047 good morinig 89,"
+res4 = re.findall("\d",exp4)
+print(res4)
+
+
+
+exp5 = "hi all,good morning"
+res5 = re.findall("g..d",exp5)
+print(res5)
+
+
+
+exp6 = "Hi good morning"
+res6 = re.findall("morning$",exp6)
+print(res6)
+
+
+
