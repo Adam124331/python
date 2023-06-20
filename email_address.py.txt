@@ -1,0 +1,10 @@
+# email validation
+
+import re 
+
+email_id = input("Enter the email-id: ")
+res = re.search("^[a-z].*@[a-z]{5,11}.[a-z]{3}",email_id)
+if res:
+    print("Valid email-id")
+else:
+    print("Invalid email-id")

@@ -1,0 +1,10 @@
+#IP address validation 
+
+import re
+
+ip_address = input("Enter the IP-address: ") 
+res = re.search("[0-9]{0,3}.[0-9]{0,3}.[0-9]{0,3}.[0-9]{0,3}",ip_address)
+if res:
+    print("Valid IP-address")
+else:
+    print("Invalid IP-address") 

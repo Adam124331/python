@@ -1,0 +1,46 @@
+# example - 1 
+
+import re 
+
+'''
+txt1 = "The world is so beautiful"
+res = re.search("^The.*beautiful$",txt1)
+if res:
+    print("Yes matched")
+else:
+    print("No match")
+'''
+
+# example - 2 
+
+'''
+txt2 = "This is the python programming class"
+print(re.search("[a-s]",txt2))
+print(re.findall('[a-s]',txt2))
+'''
+
+
+# example - 3 
+
+'''
+txt3 = "This is 78 rupees"
+print(re.findall("\d",txt3))
+print(re.search("\d",txt3))
+''' 
+
+# example - 4
+
+'''
+txt4 = "hi hello good morning hoooo"
+print(re.search("h...o",txt4))
+print(re.findall("h...o",txt4))
+'''
+
+
+# example - 5 
+
+
+'''
+txt5 = "hi h hello good morning hoooo"
+print(re.findall("^hi",txt5))
+'''
