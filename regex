@@ -1,0 +1,93 @@
+#Special sequences
+
+# Example -1
+import re
+# \w -> a-z, A-Z, 0-9, _
+'''
+txt1 = "Today it's going to rain 78 _"
+x1 = re.findall("\W",txt)
+print(x1)
+'''
+
+#Example - 2
+'''
+# \W -> lists not including the a-z A-Z 0-9, _
+txt2 = "Today it's going to rain 78 _"
+x2 = re.findall("\w",txt2)
+print(x2)
+'''
+
+#Example - 3
+'''
+# \d -> it will list the digits from 0-9
+txt3 = "Today it's 458 going to rain 78 _"
+x3 = re.findall("\d",txt3)
+print(x3)
+'''
+
+
+#Example - 4
+'''
+# \D -> it will list excluding the digits from 0-9
+txt4 = "Today it's 458 going to rain 78 _"
+x4 = re.findall("\D",txt4)
+print(x4)
+'''
+
+
+
+#Example - 5
+'''
+#To check the specified characters are present at the end of the word
+txt9 = "hi Today it's 458 going to rain"
+x9 = re.findall(r"go\b",txt9)
+if x9:
+    print("Yes matched")
+else:
+    print("Not matched")
+'''
+
+
+#Example - 6
+'''
+# To check the specified characters are present at the beginning of the word
+txt10 = "hi Today it's 458 going to rain"
+x10 = re.findall(r"\bgo",txt10)
+if x10:
+    print("Yes matched")
+else:
+    print("Not matched")
+'''
+   
+ #Example -7
+ #To check the specified characters are not present at the beginning of the word
+'''
+txt11 = "hi Today it's 458 going to rain"
+x11 = re.findall(r"\Bday",txt11)
+if x11:
+    print("Yes matched")
+else:
+    print("Not matched")
+'''
+
+#Example -8
+ # to check the specified characters are not present at the end of the word
+'''
+txt12 = "hi Today it's 458 going to rain"
+x12 = re.findall(r"go\B",txt12)
+if x12:
+    print("Yes matched")
+else:
+    print("Not matched")
+'''
+
+
+#Example -9
+ # to check the specified characters are not present at the end of the word
+'''
+txt13 = "hi Today it's 458 going to rain"
+x13 = re.findall(r"day\B",txt13)
+if x13:
+    print("Yes matched")
+else:
+    print("Not matched")
