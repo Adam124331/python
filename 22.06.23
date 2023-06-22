@@ -1,0 +1,46 @@
+# create a class
+
+class mobile_phone:
+    def __init__(self,ram,camera):
+        self.ram = ram
+        self.camera = camera
+
+x = mobile_phone('8gb','50MP')
+print(x.ram,x.camera)
+
+
+
+
+______________________________________________________________________
+
+
+# Example - 2
+
+class mobile_phone:
+    camera = '50MP'
+    ram = '8GB'
+    
+    def display(self):
+        print(self.camera)
+        print(self.ram)
+
+x = mobile_phone()
+x.display()
+
+
+
+----------------------------------------------------------------------
+
+# Example - 3
+
+class mobile_phone:
+    def __init__(self, camera, ram):
+        self.camera = camera
+        self.ram = ram
+    
+    def display(self):
+        print(self.camera)
+        print(self.ram)
+
+x = mobile_phone('50MP','8GB')
+x.display()
