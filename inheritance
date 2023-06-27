@@ -1,0 +1,75 @@
+class Product:
+    def __init__(self,name,price,deal,rating):
+        self.name=name 
+        self.price=price 
+        self.deal=deal 
+        self.rating=rating
+        self.you_save=price-deal
+
+    def display_details(self):
+        print("Product: {}".format(self.name))
+        print("Price: {}".format(self.price)) 
+        print("Deal: {}".format(self.deal)) 
+        print("Rating: {}".format(self.rating))
+        print("You save: {}".format(self.you_save)) 
+
+    def get_total_bill(self):
+        return self.get_total_bill()
+
+class Electronic(Product):
+    def __init__(self,name,price,deal,rating,warranty):
+        super().__init__(name,price,deal,rating)
+        self.warranty=warranty 
+
+    def display_details(self):
+        super().display_details()
+        print("warranty {}".format(self.warranty))
+        
+class Grocery(Product):
+    def __init__(self,name,price,deal,rating,expired):
+        super().__init__(name,price,deal,rating)
+        self.expired=expired 
+
+    def display_details(self):
+        super().display_details()
+        print("expired: {}".format(self.expired))
+
+class Order:
+    delivery_charge={
+        "Normal":0,
+        "Prime":100
+    		    }
+    def __init__(self,delivery_method,delivery_address):
+        self.item_cart=[]
+        self.delivery_address=delivery_address  
+        self.delivery_method=delivery_method 
+
+    def add_item(self,product,quantity):
+        item=(product,quantity)
+        self.item_cart.append(item)
+
+    def display_order_details(self):
+        print("Delivery_method:{}" .format(self.delivery_method))
+        print("Delivery_address:{}" .format(self.delivery_address))
+        print("Products")
+        print("-----------------------------------------------")
+        for product,quantity in self.item_cart:
+            product.display_order_details()
+            print("Quantity {}".format(quantity))
+            print("")
+        print("--------------------------------")
+        total=self.total_bill()
+        print("Total_bill:{}".format(total_bill))
+
+    def total_bill(self):
+        total=0 
+        for product,quantity in self.item_cart:
+            total+= product.get_total_bill()*quantity 
+        return total
+        
+p=Electronic("Tv",40000,25000,4,24)
+Milk=Grocery("Milk",36,30,4,"jan 2023")
+my_order=Order("Normal","Hyderabad")
+my_order.add_item("tv",1)
+my_order.add_item("Milk",3)
+my_order.display_order_details()
